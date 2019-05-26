@@ -1,4 +1,5 @@
 module.exports = {
+  pageExtensions: ['jsx', 'js'],
   webpack: config => {
   	console.log(config)
     // Fixes npm packages that depend on `fs` module
