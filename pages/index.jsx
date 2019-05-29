@@ -1,14 +1,12 @@
 import React from 'react'
 import Link from 'next/link'
-import Head from '../components/head'
-import Nav from '../components/nav'
-import styled from 'styled-components'
+import Nav from '../components/Nav/nav'
 import { GlobalStyle } from "../components/style";
 
 const Home = () => (
   <div>
     <GlobalStyle />
-
+    <Nav/>
   </div>
 );
 
