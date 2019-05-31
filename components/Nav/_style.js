@@ -40,6 +40,7 @@ export const MottoTxt = styled.div`
          line-height: 24px;
          color: #888;
          text-align: center;
+         padding-bottom: 5px;
 `;
 
 export const NavUl = styled.ul`

@@ -1,12 +1,19 @@
 import App, { Container } from 'next/app'
 import React from 'react'
 import { ThemeProvider } from 'styled-components'
+import { GlobalStyle, CenterMain } from "../components/style";
 import 'antd/dist/antd.css';
 const theme = {
   colors: {
     primary: '#0070f3'
   }
 }
+// const GlobalStyle = createGlobalStyle`
+//   body,html{
+//     background: red;
+//   }
+// `;
+
 
 export default class MyApp extends App {
   static async getInitialProps ({ Component, ctx }) {
@@ -16,17 +23,18 @@ export default class MyApp extends App {
       pageProps = await Component.getInitialProps(ctx)
     }
 
-    return { pageProps }
+    return { GlobalStyle, pageProps }
   }
 
   render () {
     const { Component, pageProps } = this.props
     return (
-      <Container>
         <ThemeProvider theme={theme}>
-          <Component {...pageProps} />
+          <Container>
+            <GlobalStyle />
+            <Component {...pageProps} />
+          </Container>
         </ThemeProvider>
-      </Container>
     )
   }
 }
