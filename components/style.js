@@ -156,6 +156,19 @@ export const GlobalStyle = createGlobalStyle`
    body,html {
      height: 100%;
   }
+
+  code {
+        background-color: #f9f2f4;
+        border-radius: 3px;
+        font-family: "Menlo", "Liberation Mono", "Consolas", "DejaVu Sans Mono", "Ubuntu Mono", "Courier New", "andale mono", "lucida console", monospace;
+        margin: 0 2px;
+        padding: 2px 5px;
+        vertical-align: middle;
+        font-size: 80%;
+        color: #c7254e;
+        white-space: pre-wrap;
+        display: inline-block;
+    }
   .main{
     padding: 0 30px 0 280px;
     width: 1000px;

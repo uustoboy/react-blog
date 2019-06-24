@@ -7,13 +7,14 @@ function hasErrors(fieldsError) {
 }
 
 class HorizontalLoginForm extends React.Component {
-    
+
     constructor(props) {
         super(props);
         this.state = {
           winWidth: '100%',
           winHeight: '100%'
         };
+        console.log(this.props.stars);
       }
 
     componentDidMount() {
@@ -87,6 +88,17 @@ class HorizontalLoginForm extends React.Component {
 }
 
 const WrappedHorizontalLoginForm = Form.create({ name: 'horizontal_login' })(HorizontalLoginForm);
+
+HorizontalLoginForm.getInitialProps = async () => {
+  axios
+    .get("https://cn.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1")
+    .then(function(response) {
+      console.log(response);
+      return {
+        stars: response
+      };
+    });
+};
 
 
 export default WrappedHorizontalLoginForm;
