@@ -19,8 +19,8 @@ class Detail extends React.Component {
         visible: false,
         value: 0,
         codeImg: [
-            "http://t2.jyimg.com/99/0c/fbea0fb65128e715acb6cc445053/163350671d.jpg?imageView2/1/w/222/h/296",
-            "http://t1.jyimg.com/4e/52/a1e8862b861ecd7777ededc6aq38/155838203d.jpg?imageView2/1/w/222/h/296"
+            "../static/images/alibaba-code.jpg",
+            "../static/images/wx-code.jpg"
         ],
     };
 

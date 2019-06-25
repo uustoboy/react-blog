@@ -14,7 +14,7 @@ const Home = () => (
         <IndexUl>
         	<IndexList>
         		<IndexTitle>
-							<Link href="/detail">申请免费HTTPS</Link>
+							<Link href="/detail"><a>申请免费HTTPS</a></Link>
 						</IndexTitle>
         		<IndexBrief>以前网站使用的https是在腾讯云上免费申请的（1年），最近一直没关心过博客，今日一看才发现https到期了，导致网站不能正常访问。
 
