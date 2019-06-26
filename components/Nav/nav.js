@@ -1,5 +1,5 @@
 import React,{ useState } from 'react'
-import Link from 'next/link'
+import Link from "./Link";
 import {
   NavMain,
   AvatarInfo,
@@ -37,8 +37,8 @@ const Nav = () => {
         <NavUl>
           {links.map(({ key, href, typeIcon, hrefText }) => (
               <NavList key={key}>
-                <Link href={href}>
-                  <a className={`nav-link ${key===curNum?"active":null}`} onClick={() => setCur(key) }>
+                <Link activeClassName='active' href={href} >
+                  <a className='nav-link' onClick={() => setCur(key) }>
                     <Icon type={typeIcon} className="nav-icon" />
                     <NavTxt className="nav-txt">{hrefText}</NavTxt>
                   </a>
